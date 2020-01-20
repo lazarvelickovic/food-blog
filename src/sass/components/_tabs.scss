@@ -1,0 +1,190 @@
+// Tabs section
+.tabs-section {
+    position: relative;
+    width: 100%;
+    background-color: #fafcff;
+
+    // Tabs heading
+    .tabs-heading {
+        text-align: center;
+        padding-top: 96px;
+
+        @include breakpoint(breakpoints(tablet)) {
+            padding-top: 65px;
+        }
+
+        @include breakpoint(breakpoints(mobile)) {
+            padding-top: 49px;
+        }
+
+        p {
+            color: color(secondary-light);
+            margin-top: 18px;
+
+            @include breakpoint(breakpoints(tablet)) {
+                font-size: 16px;
+            }
+
+            @include breakpoint(breakpoints(mobile)) {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    // Tabs links
+    .tabs-links {
+        text-align: center;
+        margin-top: 78px;
+        display: flex;
+        justify-content: center;
+
+        @include breakpoint(breakpoints(tablet)) {
+            margin-top: 51px;
+        }
+
+        @include breakpoint(breakpoints(mobile)) {
+            margin-top: 41px;
+        }
+
+        button {
+            outline: none;
+            width: 208px;
+            background-color: transparent;
+            color: color(secondary-light);
+            font-family: lora-bold;
+            font-weight: bold;
+            font-size: 28px;
+            padding-bottom: 20px;
+            border-bottom: 4px solid color(secondary-lightest);
+            cursor: pointer;
+
+            @include breakpoint(breakpoints(tablet)) {
+                font-size: 26px;
+            }
+
+            @include breakpoint(breakpoints(mobile)) {
+                font-size: 16px;
+            }
+        }
+
+        .active-tab-link {
+            color: color(secondary);
+            border-bottom: 4px solid #3f9b7a;
+        }
+    }
+
+    // Tabs content
+    .tabs-content {
+        margin: 0 230px;
+        margin-top: 110px;
+        padding-bottom: 144px;
+
+        @include breakpoint(breakpoints(laptop)) {
+            margin: 0 60px;
+            margin-top: 110px;
+        }
+
+        @include breakpoint(breakpoints(tablet)) {
+            margin: 0 24px;
+            margin-top: 69px;
+            padding-bottom: 95px;
+        }
+
+        @include breakpoint(breakpoints(mobile)) {
+            margin: 0 20px;
+            margin-top: 50px;
+            padding-bottom: 56px;
+        }
+
+        .tabs-content-flex {
+            @extend %flex;
+
+            @include breakpoint(breakpoints(mobile)) {
+                justify-content: center;
+            }
+
+            .tabs-content-flex-col-1 {
+                width: 603px;
+
+                @include breakpoint(breakpoints(tablet)) {
+                    width: 463px;
+                }
+
+                @include breakpoint(520) {
+                    width: auto;
+                }
+
+                h2 {
+                    margin-top: 22px;
+                    margin-bottom: 47px;
+                    text-align: left;
+                    color: #3f9b7a;
+                    width: 300px;
+
+                    @include breakpoint(breakpoints(tablet)) {
+                        margin-top: 0px;
+                        margin-bottom: 36px;
+                        font-size: 38px;
+                        width: 317px;
+                    }
+
+                    @include breakpoint(breakpoints(mobile)) {
+                        font-size: 22px;
+                        margin-bottom: 33px;
+                        width: auto;
+                        text-align: center;
+                    }
+                }
+    
+                p {
+                    color: color(secondary);
+                    margin-bottom: 38px;
+
+                    @include breakpoint(breakpoints(tablet)) {
+                        margin-bottom: 41px;
+                    }
+
+                    @include breakpoint(breakpoints(mobile)) {
+                        margin-bottom: 32px;
+                    }
+                }
+
+                .btn {
+                    margin-top: 44px;
+
+                    @include breakpoint(breakpoints(tablet)) {
+                        margin-top: 15px;
+                    }
+
+                    @include breakpoint(breakpoints(mobile)) { 
+                        display: block;              
+                        margin: 0 auto;
+                        margin-top: 14px;
+                    }
+                }
+            } 
+            
+            .tabs-content-flex-col-2 {
+                @include breakpoint(breakpoints(tablet)) {
+                    margin-top: 15px;
+                }
+
+                @include breakpoint(breakpoints(mobile)) {
+                    display: none;
+                }
+
+                img {
+                    @include breakpoint(breakpoints(laptop)) {
+                        width: 300px;
+                        height: 354px;
+                    }
+
+                    @include breakpoint(breakpoints(tablet)) {
+                        width: 223px;
+                        height: 277px;
+                    }
+                }
+            }
+        }
+    }
+}

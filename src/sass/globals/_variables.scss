@@ -1,0 +1,34 @@
+// Variables
+
+// Colors
+
+$colors: (
+	primary:  #274f46,
+	primary-light:  #2f5c52,
+	primary-lighter:  #97c2b6,
+	primary-lightest:  #4bb891,
+	secondary:  #002336,
+	secondary-light:  #9297b0,
+	secondary-lighter:  #b1b8cb,
+	secondary-lightest:  #eef0f6,
+	third:  #f17a00,
+	third-light:  #f3a742,
+	third-lighter:  #f6c695,
+);
+  
+$color-white:           #fff;
+  
+// Purpose Colors
+
+$base-font-color: $color-white;
+$base-background-color: $color-white;
+
+// Breakpoints 
+
+$breakpoints: (
+    laptop: 1224,
+	tablet: 1024,
+	mobile: 768
+);
+	
+

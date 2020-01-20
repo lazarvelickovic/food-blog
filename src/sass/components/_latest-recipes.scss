@@ -1,0 +1,183 @@
+// Latest recipes section
+.latest-recipes-section {
+    background-color: #fafcff;
+
+    // Latest recipes section content
+    .latest-recipes-section-content {
+        padding-top: 95px;
+        padding-bottom: 111px;
+        margin: 0 230px;
+
+        @include breakpoint(breakpoints(laptop)) {
+            margin: 0 60px;
+        }
+
+        @include breakpoint(breakpoints(tablet)) {
+            padding-top: 72px;
+            padding-bottom: 95px;
+            margin: 0 24px;
+        }
+
+        @include breakpoint(breakpoints(mobile)) {
+            padding-top: 53px;
+            padding-bottom: 61px;
+            margin: 0 20px;
+        }
+
+        // Latest recipes heading
+        .latest-recipes-heading {
+            @extend %flex;
+            height: 70px;
+            margin-bottom: 15px;
+
+            @include breakpoint(breakpoints(tablet)) {
+                height: 60px;
+            }
+
+            @include breakpoint(breakpoints(mobile)) {
+                height: auto;
+                margin-bottom: 30px;
+            }
+
+            .latest-recipes-heading-show-recipes {
+                align-self: flex-end;
+
+                @include breakpoint(breakpoints(mobile)) {
+                    display: none;
+                }
+
+                a {
+                    font-size: 14px;
+                    color: color(third);
+
+                    @include breakpoint(breakpoints(tablet)) {
+                        height: 12px;
+                    }
+
+                    &:hover {
+                        border-bottom:  1px solid color(third);
+                    }
+                }
+            }
+        }
+
+        // Latest recipes cards
+        .latest-recipes-cards {
+            @extend %flex;
+            flex-wrap: wrap;
+
+            .latest-recipes-card {
+                display: flex;
+                flex-direction: column;
+                width: 24.1%;
+                background-color: $color-white;
+                @include roundedCorners(10px);
+                @include box-shadow( 0, 2px, 8px, 0, rgba(0,0,0,0.1));
+
+                @include breakpoint(breakpoints(tablet)) {
+                    width: 48.4%;
+                    &:nth-child(1), &:nth-child(2) {
+                        margin-bottom: 3.1%;
+                    }
+                }
+
+                @include breakpoint(breakpoints(mobile)) {
+                    width: 48.55%;
+                    &:nth-child(1), &:nth-child(2) {
+                        margin-bottom: 2.9%;
+                    }
+                }
+
+                .latest-recipes-card-img {
+                    img {
+                        width: 100%;        
+                        margin-bottom: -7px;
+                    }
+                }
+
+                .latest-recipes-card-content {
+                    padding: 23px 30px;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+
+                    @include breakpoint(breakpoints(tablet)) {
+                        padding: 23px 20px;
+                    }
+
+                    @include breakpoint(breakpoints(mobile)) {
+                        padding: 20px 16px;
+                    }
+
+                    .latest-recipes-cards-footer {
+                        @extend %flex;
+
+                        span {
+                            font-size: 12px;
+                            font-family: lato-bold;
+                            font-weight: bold;
+                            color: color(secondary-lighter);
+                        }
+
+                        div {
+                            &:nth-child(2) {
+                                @include breakpoint(breakpoints(mobile)) {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }         
+            } 
+            
+            // Other recipes
+            .other-recipes {
+                position: relative;
+                
+                img {
+                    height: fit-content;
+
+                    @include breakpoint(breakpoints(mobile)) {
+                        height: auto;
+                    }
+                }
+
+                .other-recipes-overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgba(color(third-light), 0.85);
+                    @include roundedCorners(10px);
+
+                    .latest-recipes-card-content {
+                        justify-content: flex-end;
+                    }
+
+                    h4, h5 {
+                        color: $color-white;
+                    }
+
+                    h4 {
+                        font-size: 28px;
+                        flex-grow: 0;
+                        margin-bottom: 29px;
+                        margin-top: 10px;
+
+                        @include breakpoint(breakpoints(tablet)) {
+                            margin-bottom: 5px;
+                            width: 200px;
+                        }
+
+                        @include breakpoint(breakpoints(tablet)) {
+                            margin-bottom: 10px;
+                            font-size: 16px;
+                            width: auto;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}

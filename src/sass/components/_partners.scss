@@ -1,0 +1,48 @@
+// Partners section
+.partners-section {
+    margin: 0 230px;
+    margin-bottom: 12px;
+    @extend %flex;
+
+    @include breakpoint(breakpoints(mobile)) {
+           flex-wrap: wrap; 
+           justify-content: space-evenly;
+    }
+
+    @include breakpoint(breakpoints(laptop)) {
+        margin: 0 60px;
+        margin-bottom: 12px;
+    }
+
+    @include breakpoint(breakpoints(tablet)) {            
+        margin: 0 24px;
+        margin-bottom: -26px;
+    }
+
+    @include breakpoint(breakpoints(mobile)) {
+        margin: 0 20px;
+        margin-bottom: -100px;
+    }
+    
+    div {
+        margin-right: 5.5%;
+
+        @include breakpoint(breakpoints(tablet)) {            
+            margin-right: 7.3%;
+        }
+
+        @include breakpoint(breakpoints(mobile)) {
+            margin-right: 0;
+            margin-bottom: 35px;
+            max-width: 45%;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        img {
+            max-width: 100%;     
+        }
+    }
+}

@@ -1,0 +1,175 @@
+// Font Families 
+@include font-face(lato-regular, Lato-Regular);
+@include font-face(lato-italic, Lato-RegularItalic);
+@include font-face(lato-bold, Lato-Bold);
+@include font-face(lora-bold, Lora-Bold);
+
+$base-font-family:      lato-regular;
+$body-font-family:      $base-font-family;
+$heading-font-family:   lora-bold;
+ 
+// Font Sizes
+
+$base-font-size: 18px;
+
+// Line height
+
+$base-line-height:    1.556;
+$heading-line-height: 41px;
+
+// Body
+
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  -webkit-font-smoothing: subpixel-antialiased!important;
+  font-weight: normal;
+  height: 100%;
+}
+
+// Headings
+
+h1 {
+  font-size: 68px;
+  font-family: $heading-font-family;
+  line-height: 1.2;
+  margin-bottom: 41px;
+
+  @include breakpoint(breakpoints(tablet)) {
+    font-size: 58px;
+    margin-bottom: 60px;
+  }
+
+  @include breakpoint(breakpoints(mobile)) {
+    font-size: 42px;
+    margin-bottom: 50px;
+  }
+}
+
+h2 {
+  color: color(secondary);
+  font-size: 34px;
+  font-family: $heading-font-family;
+  font-weight: bold;
+  line-height: 1.235;
+  text-align: center;
+
+  @include breakpoint(breakpoints(tablet)) {
+    font-size: 30px;
+  }
+
+  @include breakpoint(breakpoints(mobile)) {
+    font-size: 22px;
+  }
+}
+
+h3 {
+  font-size: 22px;
+  font-family: $heading-font-family;
+  line-height: 1.091;
+
+  @include breakpoint(breakpoints(tablet)) {
+    font-size: 16.6px;
+  } 
+}
+
+h4 {
+  font-family: $heading-font-family;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.333;
+  color: color(secondary);
+  margin-top: 6px;
+  flex-grow: 1;
+
+  @include breakpoint(breakpoints(mobile)) {
+    font-size: 16px;
+    margin-top: 4px;
+  }
+}
+
+h5 {
+  font-family: lato-bold;
+  font-size: 12px;
+  font-weight: bold;
+  color: color(third);
+
+  @include breakpoint(breakpoints(mobile)) {
+    font-size: 10px;
+    margin-top: 32px;
+    margin-bottom: 12px;
+  }
+}
+
+h6 {
+  font-family: lato-bold;
+  font-size: 16px;
+  color: color(secondary-light);
+  margin-top: 22px;
+  margin-bottom: 10px;
+
+  @include breakpoint(breakpoints(mobile)) {
+    font-size: 14px;
+  }
+}
+
+// Other elements 
+
+p {
+  font-weight: normal;
+
+  @include breakpoint(breakpoints(mobile)) {
+    font-size: 16px;
+  }
+}
+
+a {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.btn {
+  font-size: 16px;
+  font-family: lato-bold;
+  font-weight: bold;
+  line-height: 1;
+  padding-top: 20px;
+  text-align: center;
+  color: $color-white;
+  background-color: color(third-light);
+  display: inline-block;
+  cursor: pointer;
+  width: 201px;
+  height: 55px;
+  @include roundedCorners(27.5px);
+
+  &:hover {
+    background-color: color(third);
+  }
+
+  @include breakpoint(breakpoints(mobile)) {
+    font-size: 14px;
+    padding-top: 17px;
+    width: 175px;
+    height: 47px;
+  } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

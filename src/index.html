@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Lazar Velickovic">
+    <title>Food Blog</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header aria-label="Header">
+        
+        <!-- Navigation bar -->
+        <nav aria-label="Main navigation">
+            <div class="logo-header" id="logoHeader">
+                <a href="index.html"><img src="images/logo-header.png" alt="Logo" aria-label="Logo"></a>
+            </div>
+
+            <div class="nav-links">
+                <div id="navLinks">
+                    <a href="index.html" class="active" aria-label="Home">Home</a>
+                    <a href="#" aria-label="Chef inspiration">Chef inspiration</a>
+                    <a href="#" aria-label="Recipes">Recipes</a>
+                    <a href="#" aria-label="Contact">Contact</a>
+                </div>
+                
+                <button aria-label="Search" class="search-icon" id="searchButton"></button>
+                <button aria-label="Menu" class="mobile-menu-icon" id="menuButton"></button>
+                <button aria-label="Close" class="mobile-menu-close-icon" id="closeButton"></button>
+
+                <form id="search" action="" class="search">
+                    <input type="search" placeholder="Search for recipes and blog posts..." aria-label="Search" id="searchInput" />
+                </form>
+            </div>
+        </nav>
+
+        <!-- Header Content -->
+        <div class="header-content">
+            <div class="header-content-col">
+                <div>
+                    <h1>It’s time for Cooking!</h1>
+                    <p>Do you want to get something delicious, special and healthy? We are sincerely for your service. Welcome your arrival!</p>
+                    <a href="#" class="btn" aria-label="Recipes">Go to recipes</a>
+                </div>              
+            </div> 
+
+            <div class="header-content-illustration">
+                <img src="images/header-illustration-2.png" alt="Header illustration 2" />
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Main content -->
+    <main aria-label="Main content">
+
+        <!-- Tabs section -->
+        <section aria-label="Tabs section" class="tabs-section">     
+            <div class="tabs-heading">
+                <h2>We offer you Best & Delicious food</h2>
+                <p>Creative social proof finders paradigm shift strategy innovator</p>
+            </div>
+
+            <div class="tabs-links">
+                <button aria-label="Breakfast" id="breakfastButton" class="tab-link-buttons">1. Breakfast</button>
+                <button aria-label="Lunch" id="lunchButton" class="tab-link-buttons">2. Lunch</button>
+                <button aria-label="Dinner" id="dinnerButton" class="tab-link-buttons">3. Dinner</button>
+            </div>
+
+            <!-- Tabs content -->
+            <div class="tabs-content">
+                <div class="tabs-content-flex" id="breakfast">
+                    <div class="tabs-content-flex-col-1">
+                        <h2>Our best Breakfast recipes</h2>
+                        <p>Breakfast is the most important meal of the day; choose from homemade waffles, granola, corned beef hash, par cakes, omelets or cinammon buns.</p>
+                        <p>Jump start your day with these top-rated breakfast recipes. Whether it's something savory or a little sweet, we've got covered with this nourishing round up.</p>
+                        <a href="#" class="btn" aria-label="Recipes">Go to recipes</a>
+                    </div>
+
+                    <div class="tabs-content-flex-col-2">
+                        <img src="images/tab-breakfast.png" alt="Tabs breakfast" />
+                    </div>
+                </div>
+
+                <div class="tabs-content-flex" id="lunch">
+                    <div class="tabs-content-flex-col-1">
+                        <h2>Our best Lunch recipes</h2>
+                        <p>You have breakfast planned the night before, and your shopping for dinner was already done over the weekend. But what do you do in-between the two? Don't worry, we've got plenty of lunch ideas to get you inspired.</p>
+                        <p>With a wide range of lunch ideas like hearty soups, BBQ beef sandwiches, and adventurous tacos, you're sure to start feeling the creativity flowing. Put some pizzazz in your midday munch with these delightful lunch ideas.</p>
+                        <a href="#" class="btn" aria-label="Recipes">Go to recipes</a>
+                    </div>
+
+                    <div class="tabs-content-flex-col-2">
+                        <img src="images/tab-lunch.png" alt="Tabs lunch" />
+                    </div>
+                </div>
+
+                <div class="tabs-content-flex" id="dinner">
+                    <div class="tabs-content-flex-col-1">
+                        <h2>Our best Dinner recipes</h2>
+                        <p>Discover dinner recipes in almost every category imaginable. You can choose from chicken recipes, casserole recipes, veggie side dishes, salads and oh-so-many more delectable dinner recipes.</p>
+                        <p>Take the oppotunity to expand your repertoire with this collection of great dinner recipes, from fast and simple to Healthy Living, entertaining ideas or cheesy comfort foods. No matter which dinner recipes you are searching for</p>
+                        <a href="#" class="btn" aria-label="Recipes">Go to recipes</a>
+                    </div>
+
+                    <div class="tabs-content-flex-col-2">
+                        <img src="images/tab-dinner.png" alt="Tabs dinner" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slider section -->
+        <section aria-label="Slider section" class="slider-section">
+            <h2>What Our Users Say</h2>
+
+            <div class="slider-container">
+                <!-- Slider -->
+                <div id="slider">
+
+                </div>
+
+                <!-- Slider arrows -->
+                <button aria-label="Slide left" class="slider-left-arrow" id="slideLeftButton"><img src="images/left-arrow-first-slide.png" alt="Left arrow" id="sliderArrowImgLeft" /></button>
+                <button aria-label="Slide right" class="slider-right-arrow" id="slideRightButton"><img src="images/right-arrow.png" alt="Right arrow" id="sliderArrowImgRight" /></button>
+            </div>
+            
+        </section>
+
+        <!-- Latest recipes section -->
+        <section aria-label="Latest recipes section" class="latest-recipes-section">
+            <div class="latest-recipes-section-content">
+
+                <!-- Latest recipes heading -->
+                <div class="latest-recipes-heading">
+                    <div>
+                        <h2>Our latest recipes</h2>
+                    </div>
+
+                    <div class="latest-recipes-heading-show-recipes">
+                        <a href="#" aria-label="Show recipes">Show all recipes</a>
+                    </div>
+                </div>
+
+                <!-- Latest recipes cards -->
+                <div class="latest-recipes-cards">
+
+                    <!-- Recipe 1 -->
+                    <div class="latest-recipes-card">
+                        <div class="latest-recipes-card-img">
+                            <img src="images/recipe1.png" alt="Recipe 1" aria-label="Recipe" />
+                        </div>
+                        
+                        <div class="latest-recipes-card-content">
+                            <h5>SNACKS</h5>
+                            <h4>Spanish Tortila</h4>
+
+                            <div class="latest-recipes-cards-footer">
+                                <div>
+                                    <img src="images/clock-icon.png" alt="Clock icon" aria-label="Clock icon" />
+                                    <span>20 - 30 min</span>
+                                </div>
+
+                                <div>
+                                    <span>12</span>
+                                    <img src="images/comment-icon.png" alt="Comment icon" aria-label="Comment icon" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recipe 2 -->
+                    <div class="latest-recipes-card">
+                        <div class="latest-recipes-card-img">
+                            <img src="images/recipe2.png" alt="Recipe 2" aria-label="Recipe" />
+                        </div>
+                        
+                        <div class="latest-recipes-card-content">
+                            <h5>BREAKFAST</h5>
+                            <h4>Healthy oaty fruity cereal</h4>
+
+                            <div class="latest-recipes-cards-footer">
+                                <div>
+                                    <img src="images/clock-icon.png" alt="Clock icon" aria-label="Clock icon" />
+                                    <span>10 min</span>
+                                </div>
+
+                                <div>
+                                    <span>7</span>
+                                    <img src="images/comment-icon.png" alt="Comment icon" aria-label="Comment icon" />
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+
+                    <!-- Recipe 3 -->
+                    <div class="latest-recipes-card">
+                        <div class="latest-recipes-card-img">
+                            <img src="images/recipe3.png" alt="Recipe 3" aria-label="Recipe" />
+                        </div>
+                        
+                        <div class="latest-recipes-card-content">
+                            <h5>SAUCES</h5>
+                            <h4>Cheat’s cranberry sauce</h4>
+
+                            <div class="latest-recipes-cards-footer">
+                                <div>
+                                    <img src="images/clock-icon.png" alt="Clock icon" aria-label="Clock icon" />
+                                    <span>15 - 20 min</span>
+                                </div>
+
+                                <div>
+                                    <span>2</span>
+                                    <img src="images/comment-icon.png" alt="Comment icon" aria-label="Comment icon" />
+                                </div>
+                            </div>
+                        </div>        
+                        
+                    </div>
+
+                    <!-- Other recipes -->
+                    <div class="latest-recipes-card other-recipes">
+                        <div class="latest-recipes-card-img">
+                            <img src="images/other-recipes.png" alt="Other recipes" aria-label="Other recipes" />
+                        </div>
+                        
+                        <div class="other-recipes-overlay">
+                            <div class="latest-recipes-card-content">
+                                <h5>START COOKING!</h5>
+                                <h4>Check other recipes</h4>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recipe section -->
+        <section aria-label="Recipe section" class="recipe-section">
+            <!-- Recipe section flex -->
+            <div class="recipe-section-flex">
+                <!-- Recipe section content -->
+                <div class="recipe-section-content">
+                    <span>Popular this week</span>
+                    <h2>Hummus with Spiced Summer Squash and Lamb</h2>
+                    <p>If you’re making this hummus recipe for a finicky crowd, serve all the toppings in separate bowls and let people help themselves. Lots of toasted pita for scooping up everything is nonnegotiable.</p>
+
+                    <h4>Ingridients</h4>
+
+                    <!-- Recipe lists -->
+                    <div class="recipe-lists">
+                        <div>
+                            <h6>Lamb & Assembly</h6>
+
+                            <ul class="recipe-list-one">
+                                <li>2 tsp. kosher salt</li>
+                                <li>1½ tsp. ground coriander</li>
+                                <li>1½ tsp. ground cumin</li>
+                                <li>½ tsp. ground coriander</li>
+                                <li>¼ tsp. cryshed red pepper flakes</li>
+                                <li>2 tsp. extra-virgin olive oil, divided</li>           
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h6>Hummus</h6>
+                        
+                            <ul>
+                                <li>2 15.5-oz. cans chickpeas, rinsed</li>
+                                <li>1 garlic clove, coarsely chopped</li>
+                                <li>½ cup tahini</li>
+                                <li>3 Tbsp. fresh lemon juice</li>
+                                <li>1¼ tsp. kosher salt</li>    
+                            </ul>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn" aria-label="Recipes">Read full recipe</a>
+                </div>
+
+                <!-- Recipe section image -->
+                <div class="recipe-section-img">
+                    <img src="images/dish-img.png" alt="Dish" aria-label="Dish" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Section partners -->
+        <section aria-label="Partners section" class="partners-section">
+            <div>
+                <img src="images/partners-1.png" alt="Partner 1" aria-label="Partner" />
+            </div> 
+
+            <div>
+                <img src="images/partners-2.png" alt="Partner 2" aria-label="Partner" />
+            </div> 
+
+            <div>
+                <img src="images/partners-3.png" alt="Partner 3" aria-label="Partner" />
+            </div> 
+
+            <div>
+                <img src="images/partners-4.png" alt="Partner 4" aria-label="Partner" />
+            </div> 
+
+            <div>
+                <img src="images/partners-5.png" alt="Partner 5" aria-label="Partner" />
+            </div> 
+        </section>
+
+        <!-- Subscribe section -->
+        <section aria-label="Subscribe section" class="subscribe-section">
+            <div class="subscribe-content">
+                <h2>Subscribe to our Newsletters</h2>
+                <form action="#">
+                    <input type="email" name="Email" placeholder="Email address" aria-label="Email" />
+                    <button type="submit" class="btn" aria-label="Subscribe">Subscribe</button>
+                </form>
+                <p>We will not share your informations with anyone</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer aria-label="Footer">
+            
+            <!-- Footer flex -->
+            <div class="footer-flex">
+                <!-- Footer content -->
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <img src="images/logo-footer.png" alt="Logo footer" aria-label="Logo" />
+                    </div>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quasi, sint officia omnis dolores ipsa possimus ratione quisquam. Et dolor officiis pariatur dolore quos?
+                    </p>
+
+                    <address>
+                        T: &nbsp;&nbsp;&nbsp;(+61)  979 185 942<br />
+                        E: &nbsp;&nbsp;&nbsp;contact@foodblogger.com
+                    </address>
+                </div>
+
+                <!-- Footer links -->
+                <div class="footer-links">   
+                    <!-- Popular recipes -->
+                    <div>
+                        <h3>Popular Recipes</h3>
+                        <a href="#" aria-label="Beef Medalion">Beef Medalion</a>
+                        <a href="#" aria-label="Penne Arrabiata">Penne Arrabiata</a>
+                        <a href="#" aria-label="BeSweet & Chickenef">Sweet & Chicken</a>
+                        <a href="#" aria-label="Thai Chicken Curry">Thai Chicken Curry</a>
+                        <a href="#" aria-label="Fish Curry">Fish Curry</a>
+                    </div>
+
+                    <!-- Usefull links -->
+                    <div>
+                        <h3>Usefull Links</h3>    
+                        <a href="index.html" aria-label="Home">Home</a>
+                        <a href="#" aria-label="Chef Inspirations">Chef Inspirations</a>
+                        <a href="#" aria-label="Recipes">Recipes</a>
+                        <a href="#" aria-label="Contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-copyright">
+                <p>&copy; Copyright 2019 FoodBlogger. All rights reserved.</p>
+            </div>
+            
+        </footer>
+    </main>
+
+    <!-- Footer -->
+    <footer aria-label="Footer">
+
+    </footer>
+
+    <script src="js/script.min.js"></script>
+</body>
+</html>
+
+      

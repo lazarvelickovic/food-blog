@@ -1,0 +1,110 @@
+// Subscribe section
+.subscribe-section {
+    background: url('../images/subscribe-background.png') no-repeat center;
+    background-size: cover;
+    width: 886px;
+    height: 212px;
+    margin: auto;
+    @extend %flex;
+    padding-left: 75px;
+    padding-right: 75px;
+    transform: translate(0, 50%);
+
+    @include breakpoint(breakpoints(laptop)) {
+        width: 720px;  
+    } 
+    
+    @include breakpoint(breakpoints(tablet)) {
+        padding-left: 38px;
+        padding-right: 38px;
+    } 
+
+    @include breakpoint(breakpoints(mobile)) {
+        width: 336px;
+        height: 248.5px;  
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    // Subscribe content
+    .subscribe-content {
+        width: 100%;
+        position: relative;
+
+        h2 {
+            font-size: 26px;
+            text-align: left;
+            margin-top: 32px;      
+            margin-left: 24px;
+            margin-bottom: 23px;
+
+            @include breakpoint(breakpoints(tablet)) {
+                font-size: 22px;
+                margin-top: 49px;  
+                margin-bottom: 14px;
+            } 
+
+            @include breakpoint(breakpoints(mobile)) {
+                font-size: 18px;
+                margin-top: 31px;  
+                margin-bottom: 22px;
+            } 
+        }
+
+        // Subscribe form
+        form {
+            width: 100%;
+            @extend %flex;
+
+            input {
+                border: 0.5px solid #eaeaea;
+                @include roundedCorners(13.75pt);
+                outline: none;
+                width: 504px;
+                height: 55px;
+                padding-left: 27px;
+
+                @include breakpoint(breakpoints(tablet)) {
+                    width: 396px;
+                } 
+
+                @include breakpoint(breakpoints(mobile)) {
+                    width: 288.5px;
+                }
+
+                &::placeholder {
+                    font-family: lato-regular;
+                    font-size: 16px;
+                    color: color(secondary);
+
+                    @include breakpoint(breakpoints(tablet)) {
+                        font-size: 14px;
+                    } 
+                }
+            }
+
+            button {
+                padding-top: 0;
+
+                @include breakpoint(breakpoints(mobile)) {
+                    position: absolute;
+                    bottom: 23px;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                }
+            }
+        }
+
+        p {
+            font-size: 12px;
+            color: color(secondary-light);
+            margin-left: 24px;
+            margin-top: 9px;
+
+            @include breakpoint(breakpoints(tablet)) {
+                font-size: 10px;
+                margin-top: 4px;
+            }
+        }
+    }
+}

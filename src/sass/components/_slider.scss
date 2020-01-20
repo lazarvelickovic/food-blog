@@ -1,0 +1,183 @@
+// Slider section
+.slider-section {
+    margin-top: 85px;
+    margin-bottom: 122px;
+    
+
+    @include breakpoint(breakpoints(tablet)) {
+        margin-top: 60px;
+        margin-bottom: 90px;
+    }
+
+    @include breakpoint(breakpoints(tablet)) {
+        margin-top: 56px;
+        margin-bottom: 87px;
+    }
+
+    .slider-container {
+        width: fit-content;
+        position: relative;
+        margin: 0 auto;
+
+        // Animations
+        @include keyframes(slide-left) {0%{ transform: translate(100%, 0); } 100%{ transform: translate( 0%, 0); }}
+        @include keyframes(slide-right) {0%{ transform: translate(-100%, 0); } 100%{ transform: translate( 0%, 0); }}
+
+        .slide-left-animation {
+            @include animation("slide-left 0.3s ease-in forwards");
+        }
+
+        .slide-right-animation {
+            @include animation("slide-right 0.3s ease-in forwards");
+        }
+
+        // Slider
+        .slider {
+            position: relative;
+            width: 980px;
+            height: 322px;
+            background-image: linear-gradient(141deg, #81b7ff 0%, #69a9ff 51%, #549cff 75%);
+            @include roundedCorners(10px);
+            margin: 0 auto;
+            margin-top: 85px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            @include breakpoint(breakpoints(mobile)) {
+                flex-direction: column;
+            }
+
+            @include breakpoint(breakpoints(laptop)) {
+                width: 644px;
+                height: 271px;
+            }
+
+            @include breakpoint(breakpoints(tablet)) {
+                margin-top: 60px;
+            }
+
+            @include breakpoint(breakpoints(mobile)) {
+                width: 335px;
+                height: 355px;
+                margin-top: 55px;
+            }
+
+            // Slider person info
+            .slider-person {
+                display: flex;
+                align-items: center;
+                    
+                img {
+                    margin-right: 16px;
+                    border: 4px solid #a1c9ff;
+                    @include roundedCorners(50%);
+
+                    @include breakpoint(breakpoints(tablet)) {
+                        width: 76px;
+                        height: 76px;
+                    }
+                }
+
+                p {
+                    font-family: lato-bold;
+                    font-weight: bold;
+                    line-height: 2.4;
+                    font-size: 10px;
+
+                    @include breakpoint(breakpoints(tablet)) {
+                        font-size: 7.55px;
+                    }
+                }
+            }
+
+            // Slider description
+            .slider-description {
+                width: 437px;
+
+                @include breakpoint(breakpoints(tablet)) {
+                    width: 346px;
+                }
+
+                @include breakpoint(breakpoints(tablet)) {
+                    width: 225px;
+                }
+
+                p {
+                    font-family: lato-italic;
+                    font-style: italic;
+
+                    @include breakpoint(breakpoints(tablet)) {
+                        font-size: 16px;
+                    }
+
+                    @include breakpoint(breakpoints(mobile)) {
+                        font-size: 14px;
+                        text-align: center;
+                    }
+                }
+            }    
+        }
+
+        button {
+                background: transparent;
+                position: absolute;   
+                cursor: pointer; 
+                outline: none;       
+            }
+
+        // Slider arrows
+        .slider-left-arrow {
+            left: -74px;
+            bottom: 135px;
+
+            @include breakpoint(breakpoints(laptop)) {
+                bottom: 114.5px;
+            }
+
+            @include breakpoint(breakpoints(tablet)) {
+                left: -38px;
+            }
+
+            @include breakpoint(breakpoints(mobile)) {
+                left: 118px;
+                bottom: -67px;
+            }
+
+            img {
+                @include breakpoint(breakpoints(tablet)) {
+                    width: 20px;
+                    height: 34px;
+                }
+            }
+        }
+
+        .slider-right-arrow {
+            right: -74px;
+            bottom: 135px;
+
+            @include breakpoint(breakpoints(laptop)) {
+                bottom: 114.5px;
+            }
+
+            @include breakpoint(breakpoints(tablet)) {
+                right: -38px;
+            }
+
+            @include breakpoint(breakpoints(mobile)) {
+                right: 118px;
+                bottom: -67px;
+            }
+
+            img {
+                @include breakpoint(breakpoints(tablet)) {
+                    width: 20px;
+                    height: 34px;
+                }
+            }
+        }
+    }  
+}
+
+
+  

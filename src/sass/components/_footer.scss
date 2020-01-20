@@ -1,0 +1,181 @@
+// Footer
+footer {
+    background-color: color(primary);
+
+    // Footer flex
+    .footer-flex {
+        margin: 0 230px;
+        padding-top: 160px;
+        padding-bottom: 65px;
+        @extend %flex;
+
+        @include breakpoint(breakpoints(laptop)) {
+            margin: 0 60px;
+        }
+
+        @include breakpoint(breakpoints(tablet)) {
+            margin: 0 24px;
+            padding-top: 193px;
+            padding-bottom: 63px;
+        }
+
+        @include breakpoint(breakpoints(mobile)) {
+            margin: 0 20px;
+            padding-top: 186px;
+            padding-bottom: 48px;
+            flex-direction: column;
+        }
+
+        // Footer content
+        .footer-content {
+            width: 390px; 
+
+            @include breakpoint(breakpoints(tablet)) {
+                width: 259px;
+            }
+
+            @include breakpoint(breakpoints(mobile)) {
+                width: auto;
+                text-align: center;
+            }
+
+            .footer-logo {
+                img {
+
+                    @include breakpoint(breakpoints(tablet)) {
+                        width: 145px;
+                        height: 27px;
+                    }
+
+                    @include breakpoint(breakpoints(mobile)) {
+                        width: 215px;
+                        height: 40px;
+                    }                   
+                }
+            }
+
+            p {
+                margin-top: 40px;  
+                margin-bottom: 30px;
+                font-size: 16px;
+                color: color(primary-lighter);
+
+                @include breakpoint(breakpoints(tablet)) {
+                    margin-top: 30px;
+                    margin-bottom: 40px;
+                    font-size: 14px;
+                }
+
+                @include breakpoint(breakpoints(mobile)) {
+                    margin-top: 24px;
+                    margin-bottom: 31px;
+                }
+            }
+
+            address {
+                font-size: 14px;
+                color: color(primary-lighter);
+
+                @include breakpoint(breakpoints(mobile)) {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+
+        // Footer linkss
+        .footer-links {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 27px;
+            width: 562px; 
+
+            @include breakpoint(breakpoints(tablet)) {
+                width: 398px;
+                margin-top: 15px;
+            }
+
+            @include breakpoint(breakpoints(mobile)) {
+                width: auto;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            div {
+                &:first-child {
+                    @include breakpoint(breakpoints(mobile)) {
+                        margin-bottom: 33px;
+                    } 
+                }
+            }
+
+            h3 {
+                margin-bottom: 26px;
+
+                @include breakpoint(breakpoints(tablet)) {
+                    margin-bottom: 30px;
+                    font-size: 18px;
+                }
+            }
+            
+            a {
+                display: block;
+                width: fit-content;
+                color: color(primary-lighter);
+                margin-bottom: 20px;
+
+                @include breakpoint(breakpoints(tablet)) {
+                    margin-bottom: 22px;
+                    font-size: 14px;
+                }
+
+                @include breakpoint(breakpoints(mobile)) {
+                    text-align: center;
+                    width: fit-content;
+                    margin-left: auto;
+                    margin-right: auto;
+                }  
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &:hover {
+                    border-bottom: 1px solid color(primary-lighter);
+                }
+            }
+        }
+    }
+
+    // Copyright
+    .footer-copyright {
+        padding: 0 230px;
+        font-size: 14px;
+        color: color(primary-lighter);
+
+        @include breakpoint(breakpoints(laptop)) {
+            padding: 0 60px;
+        }
+
+        @include breakpoint(breakpoints(tablet)) {
+            padding: 0 24px;
+            font-size: 12px;
+        }
+
+        @include breakpoint(breakpoints(mobile)) {
+            padding: 0 20px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        background-color: color(primary-light);
+
+        p {
+            padding: 19.5px 0;
+
+            @include breakpoint(breakpoints(mobile)) {
+                text-align: center;
+                font-size: 12px;
+            }
+        }
+    }
+}

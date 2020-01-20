@@ -1,0 +1,371 @@
+// Adding style to header
+header {
+    // Hero banner
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: color(third-lighter);
+    overflow: hidden;
+
+    // Navigation menu
+    nav { 
+        position: relative;
+        margin: 0 230px;
+        padding-top: 35px;
+        @extend %flex;
+
+        @include breakpoint(breakpoints(laptop)) {
+            margin: 0 60px;
+        }
+
+        @include breakpoint(breakpoints(tablet)) {
+            margin: 0 24px;
+            padding-top: 41px;
+        }
+
+        @include breakpoint(breakpoints(mobile)) {
+            margin: 0 20px;
+            padding-top: 25px;
+        }   
+
+        // Header logo
+        .logo-header {
+
+            z-index: 101;
+
+            img {
+                @include breakpoint(breakpoints(tablet)) {
+                    width: 229px;
+                    height: 40px;
+                }
+            } 
+
+            img {
+                @include breakpoint(breakpoints(mobile)) {
+                    width: 159px;
+                    height: 28px;
+                }
+            } 
+
+        }
+
+        // Navigation links
+        .nav-links {
+
+            div {
+                display: inline-block;
+
+                @include breakpoint(breakpoints(tablet)) {
+                    display: none;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    z-index: 100;
+                    background-color: color(third-lighter);      
+                }
+
+                @include breakpoint(breakpoints(mobile)) {
+                    display: none;   
+                }
+                
+                a {
+                    font-family: lato-bold;
+                    font-weight: bold;
+                    color: $color-white;
+                    padding-bottom: 10px;
+                    margin-right: 48px;
+    
+                    @include breakpoint(1400) {
+                        margin-right: 30px;
+                    }
+    
+                    @include breakpoint(breakpoints(laptop)) {
+                        margin-right: 20px;
+                    }  
+                    
+                    @include breakpoint(breakpoints(tablet)) {
+                        font-size: 32px;
+                        display: block;
+                        width: fit-content;
+                        margin-right: auto;
+                        margin-left: auto;
+                        text-align: center;
+                        margin-bottom: 34px;
+                        padding-bottom: 13px;
+
+                        &:first-child {
+                            margin-top: 216px;
+                        }
+                    }
+
+                    @include breakpoint(breakpoints(mobile)) {
+                        font-size: 24px;
+                        width: 180px;
+                        margin-bottom: 30px;
+
+                        &:first-child {
+                            margin-top: 129px;
+                        }
+                    }
+
+                    &:hover {
+                        border-bottom: 2px solid color(third-light);
+                    }
+                }
+
+            }
+ 
+            .active {
+                border-bottom: 2px solid color(third-light);
+            }
+    
+            // Navigation icons
+            .search-icon {
+                cursor: pointer;
+                width: 18px;
+                height: 18px;
+                background: url('../images/search-icon.png') no-repeat 0 0;
+                padding-bottom: 4px;
+                margin-right: 33.5px;
+                outline: none;
+
+                @include breakpoint(1400) {
+                    margin-right: 0;
+                }
+
+                @include breakpoint(breakpoints(tablet)) {
+                    width: 32px;
+                    height: 32px;
+                    padding-bottom: 8px;
+                    background-size: 32px 32px;
+                    margin-right: 78px;
+                }
+
+                @include breakpoint(breakpoints(mobile)) {
+                    width: 22px;
+                    height: 22px;
+                    padding-bottom: 0px;
+                    background-size: 22px 22px;
+                    margin-right: 52px;
+                }
+            }  
+
+            .mobile-menu-icon {
+                position: absolute;
+                right: 0;
+                display: none;
+                width: 38px;
+                height: 32px;
+                padding-bottom: 8px;
+                background: url('../images/mobile-menu.png') no-repeat 0 0;
+                cursor: pointer;
+                outline: none;
+
+                @include breakpoint(breakpoints(tablet)) {
+                    display: inline-block;
+                }
+
+                @include breakpoint(breakpoints(mobile)) {
+                    width: 25px;
+                    height: 21px;
+                    padding-bottom: 4px;
+                    background-size: 25px 21px;
+                }
+            }
+
+            .mobile-menu-close-icon {
+                display: none;
+                width: 36px;
+                height: 36px;
+                background: url('../images/close-icon.png') no-repeat 0 0;
+                z-index: 101;
+                cursor: pointer;
+                outline: none;
+
+                @include breakpoint(breakpoints(tablet)) {
+                    position: fixed;
+                    right: 24px;
+                }
+
+                @include breakpoint(breakpoints(mobile)) {
+                    width: 23px;
+                    height: 23px;
+                    background-size: 23px 23px;
+                    right: 20px;
+                }
+            }
+
+            // Search form
+            .search {
+                display: none;
+                position: absolute;
+                bottom: 8px;
+                right: 25px;
+                width: 602px;
+                padding-bottom: 5px;
+                border-bottom: 2px solid color(third-light);
+
+                @include breakpoint(1400) {
+                    right: -80px;
+                }
+
+                @include breakpoint(breakpoints(tablet)) {
+                    width: 658px;
+                    left: 0px;
+                    bottom: -49px;
+                    padding-bottom: 17px;
+                }
+
+                @include breakpoint(breakpoints(mobile)) {
+                    width: 285px;
+                    bottom: -42px;
+                }
+
+                input {
+                    padding-left: 55px;
+                    width: 547px;
+                    background-color: transparent;
+                    outline: none;
+                    background-image: url('../images/search-icon.png');
+                    background-position: 18px 6px;
+                    background-repeat: no-repeat;
+
+                    @include breakpoint(breakpoints(tablet)) {
+                        width: 558px;
+                        padding-left: 100px;
+                        background-position: 40px 0px;
+                        background-size: 28px 28px;
+                    }
+
+                    @include breakpoint(breakpoints(mobile)) {
+                        width: 265px;
+                        padding-left: 60px;
+                        background-position: 20px 5px;
+                        background-size: 22px 22px;
+                    }
+
+                    &::placeholder {
+                        font-size: 14px;
+                        color: $color-white;
+
+                        @include breakpoint(breakpoints(tablet)) {
+                            font-size: 16px;
+                        }
+
+                        @include breakpoint(breakpoints(mobile)) {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }   
+
+    }
+
+    // Header Content 
+    .header-content {
+        margin-top: 95px;
+        margin-right: 161px;
+        margin-left: 98px;
+        margin-bottom: 113px;
+        @extend %flex;
+
+        @include breakpoint(breakpoints(laptop)) {
+            margin-top: 117px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }  
+
+        @include breakpoint(breakpoints(mobile)) {
+            margin-top: 65px;
+            flex-direction: column;
+            margin-bottom: 47px;
+        } 
+
+        .header-content-col {
+            width: 512px;  
+            margin-top: 14px;       
+            background: url('../images/header-illustration-1.png') no-repeat 0 0;
+            background-size: 401px 445px;
+            z-index: 10;
+
+            @include breakpoint(breakpoints(laptop)) {
+                margin-top: 0px;
+                margin-left: -72px;
+            }
+
+            @include breakpoint(breakpoints(tablet)) {
+                margin-left: -108px;
+            }
+
+            @include breakpoint(breakpoints(mobile)) {
+                margin-left: -112px;
+                background: none;
+            }
+            
+
+            div {
+                margin-top: 40px;
+                margin-left: 132px;
+                width: 384px;
+
+                @include breakpoint(breakpoints(tablet)) {
+                    margin-top: 28px;
+                }
+
+                @include breakpoint(breakpoints(mobile)) {
+                    margin-top: 0px;
+                    width: 300px;
+                } 
+        
+            }
+        
+        }
+
+        .header-content-illustration {
+            z-index: 1;
+            @include breakpoint(breakpoints(laptop)) {
+                margin-top: 139px;
+            }  
+
+            @include breakpoint(breakpoints(mobile)) {
+                margin-top: -39px;
+                align-self: flex-end;
+            }  
+
+
+            img {
+                @include breakpoint(breakpoints(laptop)) {
+                    width: 387px;
+                    height: 358px;
+                }  
+
+                @include breakpoint(breakpoints(mobile)) {
+                    width: 286px;
+                    height: 265px;       
+                } 
+            }
+
+        }
+
+        .btn {
+            margin-top: 45px;  
+            
+            @include breakpoint(breakpoints(tablet)) {
+                margin-top: 60px;
+            }
+        }
+
+    }
+
+}
+
+
+  
+
+  
+  
+
+  
